@@ -4,13 +4,13 @@
 SCRIPT_DIR=$(dirname $(readlink -f $0))
 
 # KEYCLOAK configuration
-KEYCLOAK_IMAGE_NAME="local/virtuoworks/keycloak"
+KEYCLOAK_IMAGE_NAME="what_you_want"
 KEYCLOAK_LATEST="$KEYCLOAK_IMAGE_NAME:latest"
-KEYCLOAK_CONTAINER_NAME="keycloak.virtuoworks.local"
+KEYCLOAK_CONTAINER_NAME="what_you_want_container"
 
 # PostgreSQL configuration
-POSTGRES_IMAGE_NAME="local/virtuoworks/keycloak/db"
-POSTGRES_CONTAINER_NAME="db.keycloak.virtuoworks.local"
+POSTGRES_IMAGE_NAME="what_you_want_db"
+POSTGRES_CONTAINER_NAME="what_you_want_container"
 POSTGRES_LATEST="$POSTGRES_IMAGE_NAME:latest"
 POSTGRES_DATA_PATH="${SCRIPT_DIR}/../docker/postgres/data"
 
@@ -31,7 +31,7 @@ APP_DIR=/var/lib/postgresql/data
 # Mounts
 MOUNT_APP=source=$POSTGRES_DATA_PATH,target=${APP_DIR}
 # Network configuration
-NETWORK_NAME="virtuoworks_network"
+NETWORK_NAME="network"
 
 # Running PostgreSQL container
 docker run -d \
