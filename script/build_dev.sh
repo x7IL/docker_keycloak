@@ -1,17 +1,17 @@
-#!/bin/bash
+ #!/bin/bash
 
 # Current script directory
 SCRIPT_DIR=$(dirname $(readlink -f $0))
 
 # Network configuration
-NETWORK_NAME="virtuoworks_network"
+NETWORK_NAME="network"
 
 # Create network if not exists
 docker network inspect $NETWORK_NAME >/dev/null 2>&1 || docker network create $NETWORK_NAME
 
 # Image names
-KEYCLOAK_NAME="local/virtuoworks/keycloak"
-POSTGRES_NAME="local/virtuoworks/keycloak/db"  # Changed mariadb to postgres
+KEYCLOAK_NAME="what_you_want"
+POSTGRES_NAME="what_you_want_db"  # Changed mariadb to postgres
 
 # Image tagging configuration
 KEYCLOAK_LATEST="$KEYCLOAK_NAME:latest"
